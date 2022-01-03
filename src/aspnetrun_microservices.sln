@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{7F1226CF-09F1-4603-97ED-2A538007A6D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{FCFE2011-0F19-4154-81EB-8A86F9A46901}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Catalog.API\Catalog.API.csproj", "{FEF5FB56-9C9D-4D6C-8FFF-483D4EAF4075}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{0EABA6CD-8F2D-46E9-AC25-7FA74E8D2804}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEF5FB56-9C9D-4D6C-8FFF-483D4EAF4075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF5FB56-9C9D-4D6C-8FFF-483D4EAF4075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF5FB56-9C9D-4D6C-8FFF-483D4EAF4075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF5FB56-9C9D-4D6C-8FFF-483D4EAF4075}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FCFE2011-0F19-4154-81EB-8A86F9A46901} = {7F1226CF-09F1-4603-97ED-2A538007A6D4}
+		{FEF5FB56-9C9D-4D6C-8FFF-483D4EAF4075} = {FCFE2011-0F19-4154-81EB-8A86F9A46901}
+		{0EABA6CD-8F2D-46E9-AC25-7FA74E8D2804} = {7F1226CF-09F1-4603-97ED-2A538007A6D4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {072E4608-642C-4408-B314-1CB7BEC26F3B}
+	EndGlobalSection
+EndGlobal
