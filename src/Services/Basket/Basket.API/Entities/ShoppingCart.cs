@@ -12,6 +12,10 @@ namespace Basket.API.Entities
         {
 
         }
+        public ShoppingCart(string userName)
+        {
+            UserName = userName;
+        }
 
         public Decimal TotalPrice
         {
