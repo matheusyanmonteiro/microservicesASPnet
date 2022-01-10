@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace Basket.API.GrpcServices
 {
-    public class DiscountGrpcService
-    {
-        
-    }
+  public class DiscountGrpcService
+  {
+
+  }
 }
