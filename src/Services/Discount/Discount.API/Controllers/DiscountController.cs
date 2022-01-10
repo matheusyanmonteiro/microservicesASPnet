@@ -40,6 +40,7 @@ namespace Discount.API.Controllers
         [ProducesResponseType(typeof(Coupon), (int) HttpStatusCode.OK)]
         public async Task<ActionResult<Coupon>> UpdateDiscount([FromBody] Coupon coupon)
         {
+           
             return Ok(await _repository.UpdateDiscount(coupon));
         }
 
@@ -47,7 +48,8 @@ namespace Discount.API.Controllers
         [ProducesResponseType(typeof(void), (int) HttpStatusCode.OK)]
         public async Task<ActionResult<bool>> DeleteDiscount(string productName)
         {
-            return Ok(await _repository.DeleteDiscount(productName);
+           
+            return Ok(await _repository.DeleteDiscount(productName));
         }
     }
 }
