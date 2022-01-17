@@ -4,11 +4,11 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Npgsql;
 
-namespace Discount.Grpc.Extensions;
-
-public static class HostExtensions
+namespace Discount.Grpc.Extensions
 {
-    public static IHost MigrateDatabase<TContext>(this IHost host, int? retry = 0)
+    public static class HostExtensions
+    {
+        public static IHost MigrateDatabase<TContext>(this IHost host, int? retry = 0)
         {
             int retryForAvailability = retry.Value;
 
@@ -63,4 +63,7 @@ public static class HostExtensions
 
             return host;
         }
+    }
 }
+
+
