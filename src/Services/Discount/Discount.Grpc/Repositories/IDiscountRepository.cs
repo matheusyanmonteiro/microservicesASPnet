@@ -1,4 +1,5 @@
 using Discount.Grpc.Entities;
+using System.Threading.Tasks;
 
 namespace Discount.Grpc.Repositories
 {
