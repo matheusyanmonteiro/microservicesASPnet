@@ -1,11 +1,13 @@
-﻿{
+{
   "profiles": {
-    "Discount.Grpc": {
+    "Start": {
       "commandName": "Project",
       "environmentVariables": {
+        "Key": "Value",
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "dotnetRunMessages": "true",
+      "ErrorString": "Unexpected end of content while loading JObject. Path 'profiles', line 13, position 0.",
       "applicationUrl": "http://localhost:5003"
     }
   }
+}

@@ -65,5 +65,3 @@ namespace Discount.Grpc.Extensions
         }
     }
 }
-
-
