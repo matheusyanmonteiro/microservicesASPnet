@@ -34,7 +34,7 @@ namespace Ordering.Infrastructure.Mail
             var from = new EmailAddress
             {
                 Email = _emailSettings.FromAddress,
-                Name = _emailSettings.FromName
+                Name = _emailSettings.FromName 
             };
 
             var sendGridMessage = MailHelper.CreateSingleEmail(from, to, subject, emailBody, emailBody);
