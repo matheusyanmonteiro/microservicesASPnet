@@ -9,15 +9,15 @@ namespace Ordering.Infrastructure.Persistence
 {
     public class OrderContext : DbContext
     {
-        public DbSet<Order> Orders { get; set; }
-
         public OrderContext(DbContextOptions<OrderContext> options) : base(options)
         {
         }
 
+        public DbSet<Order> Orders { get; set; }
+
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            foreach(var entry in ChangeTracker.Entries<EntityBase>())
+            foreach (var entry in ChangeTracker.Entries<EntityBase>())
             {
                 switch (entry.State)
                 {
@@ -32,7 +32,7 @@ namespace Ordering.Infrastructure.Persistence
                 }
             }
 
-            return base.SaveChangesAsync(cancellationToken); 
+            return base.SaveChangesAsync(cancellationToken);
         }
     }
 }
