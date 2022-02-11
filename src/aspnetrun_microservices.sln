@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32002.261
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{CD13C47A-255C-425E-8886-A8194603654B}"
 EndProject
@@ -25,11 +25,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.API", "Services\Or
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5225974D-187C-452D-826B-E6F2A53EC776}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Domain", "Services\Ordering\Ordering.Domain\Ordering.Domain.csproj", "{B5DDE409-207A-48CB-ACD0-A537DD8C0C2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Domain", "Services\Ordering\Ordering.Domain\Ordering.Domain.csproj", "{B5DDE409-207A-48CB-ACD0-A537DD8C0C2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Application", "Services\Ordering\Ordering.Application\Ordering.Application.csproj", "{995781A8-ED84-4A93-AB6D-8E4D3DD618C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Application", "Services\Ordering\Ordering.Application\Ordering.Application.csproj", "{995781A8-ED84-4A93-AB6D-8E4D3DD618C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Infrastructure", "Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{5118C7C9-E8BA-422A-B43E-EF874C1E5C07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Infrastructure", "Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{5118C7C9-E8BA-422A-B43E-EF874C1E5C07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{7F8AA4B3-6944-47B4-A234-3AE71DD1F165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Messages", "BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj", "{C30945B1-C81F-4F26-937F-2F10507AB9CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +77,10 @@ Global
 		{5118C7C9-E8BA-422A-B43E-EF874C1E5C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5118C7C9-E8BA-422A-B43E-EF874C1E5C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5118C7C9-E8BA-422A-B43E-EF874C1E5C07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30945B1-C81F-4F26-937F-2F10507AB9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30945B1-C81F-4F26-937F-2F10507AB9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30945B1-C81F-4F26-937F-2F10507AB9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30945B1-C81F-4F26-937F-2F10507AB9CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +98,7 @@ Global
 		{B5DDE409-207A-48CB-ACD0-A537DD8C0C2C} = {2902C738-96D3-4258-92E8-4EFD0A409812}
 		{995781A8-ED84-4A93-AB6D-8E4D3DD618C8} = {2902C738-96D3-4258-92E8-4EFD0A409812}
 		{5118C7C9-E8BA-422A-B43E-EF874C1E5C07} = {2902C738-96D3-4258-92E8-4EFD0A409812}
+		{C30945B1-C81F-4F26-937F-2F10507AB9CD} = {7F8AA4B3-6944-47B4-A234-3AE71DD1F165}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E99922D-7AA8-4B41-BE73-05911300799D}
