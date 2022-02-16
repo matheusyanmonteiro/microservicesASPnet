@@ -31,14 +31,14 @@ namespace Ordering.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApplicationServices();
-            services.AddInfraestructureServices(Configuration);
+            services.AddInfrastructureServices(Configuration);
 
-            services.AddMassTransit(config =>
-            {
+            // MassTransit-RabbitMQ Configuration
+            services.AddMassTransit(config => {
+
                 config.AddConsumer<BasketCheckoutConsumer>();
 
-                config.UsingRabbitMq((ctx, cfg) =>
-                {
+                config.UsingRabbitMq((ctx, cfg) => {
                     cfg.Host(Configuration["EventBusSettings:HostAddress"]);
 
                     cfg.ReceiveEndpoint(EventBusConstants.BasketCheckoutQueue, c =>
@@ -49,6 +49,7 @@ namespace Ordering.API
             });
             services.AddMassTransitHostedService();
 
+            // General Configuration
             services.AddAutoMapper(typeof(Startup));
             services.AddScoped<BasketCheckoutConsumer>();
 
