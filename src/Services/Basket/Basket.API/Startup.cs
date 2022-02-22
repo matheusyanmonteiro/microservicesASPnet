@@ -37,6 +37,10 @@ namespace Basket.API
             services.AddScoped<DiscountGrpcService>();
 
 
+            services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>
+                (o => o.Address = new Uri(Configuration["GrpcSettings:DiscountUrl"]));
+            services.AddScoped<DiscountGrpcService>();
+
             services.AddMassTransit(config =>
             {
                 config.UsingRabbitMq((ctx, cfg) =>

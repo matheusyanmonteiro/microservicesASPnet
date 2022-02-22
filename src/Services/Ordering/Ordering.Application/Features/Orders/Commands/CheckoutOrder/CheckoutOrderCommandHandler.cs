@@ -6,6 +6,9 @@ using Ordering.Application.Contracts.Persistence;
 using Ordering.Application.Models;
 using Ordering.Domain.Entities;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -40,7 +43,7 @@ namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
 
         private async Task SendMail(Order order)
         {
-            var email = new Email() { To = "matheusyanmonteiro@gmail.com", Body = $"Order was created.", Subject = "Order was created" };
+            var email = new Email() { To = "ezozkme@gmail.com", Body = $"Order was created.", Subject = "Order was created" };
 
             try
             {
