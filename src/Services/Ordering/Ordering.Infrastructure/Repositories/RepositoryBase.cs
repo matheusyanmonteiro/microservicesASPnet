@@ -78,6 +78,11 @@ namespace Ordering.Infrastructure.Repositories
             return await query.ToListAsync();
         }
 
+        public Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>> predicate = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, List<Expression<Func<T, object>>> includes = null, bool disableTracking = true)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<T> GetByIdAsync(int id)
         {
             return await _dbContext.Set<T>().FindAsync(id);
