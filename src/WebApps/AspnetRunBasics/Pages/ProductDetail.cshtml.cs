@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using AspnetRunBasics.Models;
-using AspnetRunBasics.Repositories;
 using AspnetRunBasics.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
