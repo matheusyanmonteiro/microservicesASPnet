@@ -15,15 +15,6 @@ namespace AspnetRunBasics.Services
             _client = client ?? throw new ArgumentNullException(nameof(client));
         }
 
-        public async Task CheckoutBasket(BasketCheckoutModel model)
-        {
-            var response = await _client.PostAsJson($"/Basket/Checkout", model);
-            if (!response.IsSuccessStatusCode)
-            {
-                throw new Exception("Something went wrong when calling api.");
-            }
-        }
-
         public async Task<BasketModel> GetBasket(string userName)
         {
             var response = await _client.GetAsync($"/Basket/{userName}");
@@ -34,12 +25,19 @@ namespace AspnetRunBasics.Services
         {
             var response = await _client.PostAsJson($"/Basket", model);
             if (response.IsSuccessStatusCode)
-            {
                 return await response.ReadContentAs<BasketModel>();
-            }
             else
             {
-                throw new Exception("Something went wrong when calling api");
+                throw new Exception("Something went wrong when calling api.");
+            }
+        }
+
+        public async Task CheckoutBasket(BasketCheckoutModel model)
+        {
+            var response = await _client.PostAsJson($"/Basket/Checkout", model);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Something went wrong when calling api.");
             }
         }
     }
