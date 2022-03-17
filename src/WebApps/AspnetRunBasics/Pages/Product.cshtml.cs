@@ -32,9 +32,9 @@ namespace AspnetRunBasics
             var productList = await _catalogService.GetCatalog();
             CategoryList = productList.Select(p => p.Category).Distinct();
 
-            if (!string.IsNullOrEmpty(categoryName))
+            if (!string.IsNullOrWhiteSpace(categoryName))
             {
-                productList = productList.Where(p => p.Category == categoryName);
+                ProductList = productList.Where(p => p.Category == categoryName);
                 SelectedCategory = categoryName;
             }
             else

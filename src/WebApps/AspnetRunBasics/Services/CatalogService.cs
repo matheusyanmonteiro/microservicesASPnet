@@ -15,19 +15,6 @@ namespace AspnetRunBasics.Services
         {
             _client = client ?? throw new ArgumentNullException(nameof(client));
         }
-        public async Task<CatalogModel> CreateCatalog(CatalogModel model)
-        {
-            var response = await _client.PostAsJson($"/Catalog", model);
-
-            if (response.IsSuccessStatusCode)
-            {
-                return await response.ReadContentAs<CatalogModel>();
-            }
-            else
-            {
-                throw new Exception("Something went wrong when calling api.");
-            }
-        }
 
         public async Task<IEnumerable<CatalogModel>> GetCatalog()
         {
@@ -45,6 +32,17 @@ namespace AspnetRunBasics.Services
         {
             var response = await _client.GetAsync($"/Catalog/GetProductByCategory/{category}");
             return await response.ReadContentAs<List<CatalogModel>>();
+        }
+
+        public async Task<CatalogModel> CreateCatalog(CatalogModel model)
+        {
+            var response = await _client.PostAsJson($"/Catalog", model);
+            if (response.IsSuccessStatusCode)
+                return await response.ReadContentAs<CatalogModel>();
+            else
+            {
+                throw new Exception("Something went wrong when calling api.");
+            }
         }
     }
 }

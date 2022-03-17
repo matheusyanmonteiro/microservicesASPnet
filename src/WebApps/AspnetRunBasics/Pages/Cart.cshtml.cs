@@ -35,8 +35,8 @@ namespace AspnetRunBasics
             var item = basket.Items.Single(x => x.ProductId == productId);
             basket.Items.Remove(item);
 
-
             var basketUpdated = await _basketService.UpdateBasket(basket);
+
             return RedirectToPage();
         }
     }

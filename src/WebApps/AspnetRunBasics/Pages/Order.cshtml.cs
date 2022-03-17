@@ -14,11 +14,10 @@ namespace AspnetRunBasics
 
         public OrderModel(IOrderService orderService)
         {
-            _orderService = orderService ??  throw new ArgumentNullException(nameof(orderService));
+            _orderService = orderService ?? throw new ArgumentNullException(nameof(orderService));
         }
 
         public IEnumerable<OrderResponseModel> Orders { get; set; } = new List<OrderResponseModel>();
-
 
         public async Task<IActionResult> OnGetAsync()
         {

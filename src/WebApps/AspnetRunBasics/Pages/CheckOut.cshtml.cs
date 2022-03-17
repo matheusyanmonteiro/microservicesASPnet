@@ -20,6 +20,7 @@ namespace AspnetRunBasics
 
         [BindProperty]
         public BasketCheckoutModel Order { get; set; }
+
         public BasketModel Cart { get; set; } = new BasketModel();
 
         public async Task<IActionResult> OnGetAsync()
@@ -44,7 +45,7 @@ namespace AspnetRunBasics
             Order.TotalPrice = Cart.TotalPrice;
 
             await _basketService.CheckoutBasket(Order);
-
+            
             return RedirectToPage("Confirmation", "OrderSubmitted");
         }       
     }

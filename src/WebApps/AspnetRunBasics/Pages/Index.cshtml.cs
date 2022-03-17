@@ -10,7 +10,6 @@ namespace AspnetRunBasics.Pages
 {
     public class IndexModel : PageModel
     {
-
         private readonly ICatalogService _catalogService;
         private readonly IBasketService _basketService;
 
@@ -19,7 +18,6 @@ namespace AspnetRunBasics.Pages
             _catalogService = catalogService ?? throw new ArgumentNullException(nameof(catalogService));
             _basketService = basketService ?? throw new ArgumentNullException(nameof(basketService));
         }
-
 
         public IEnumerable<CatalogModel> ProductList { get; set; } = new List<CatalogModel>();
 
@@ -34,7 +32,7 @@ namespace AspnetRunBasics.Pages
             var product = await _catalogService.GetCatalog(productId);
 
             var userName = "swn";
-            var basket = await _basketService.GetBasket(productId);
+            var basket = await _basketService.GetBasket(userName);
 
             basket.Items.Add(new BasketItemModel
             {
